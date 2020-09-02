@@ -1,6 +1,6 @@
 package com.learning.test;
 
-import static io.restassured.RestAssured.post;
+import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.learning.rules.Report;
@@ -20,7 +20,7 @@ public class PostRequestTest {
 
     @Test
     void sendRequest() {
-        String body = post("/mock").then().statusCode(200).extract().body().asString();
+        String body = given().body("").post("/mock").then().statusCode(200).extract().body().asString();
         System.out.println(body);
         assertEquals("Response from post!", body);
     }

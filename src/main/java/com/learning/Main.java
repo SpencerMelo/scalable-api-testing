@@ -10,7 +10,7 @@ public class Main {
         JUnitCore jUnitCore = new JUnitCore();
 
         try {
-            jUnitCore.run(Class.forName("com.learning.suite." +  args[0].trim()));
+            jUnitCore.run(Class.forName("com.learning.suite." + args[0].trim()));
         } catch (ClassNotFoundException e) {
             throw new IllegalArgumentException("Invalid suite name.");
         }
