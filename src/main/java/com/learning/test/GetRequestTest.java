@@ -1,5 +1,8 @@
 package com.learning.test;
 
+import static io.restassured.RestAssured.get;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import com.learning.rules.Report;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,9 +10,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
-import static io.restassured.RestAssured.get;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("restRegression")
 @ExtendWith(Report.class)

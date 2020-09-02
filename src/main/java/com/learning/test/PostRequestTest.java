@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.learning.rules.Report;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,6 +20,7 @@ public class PostRequestTest {
     }
 
     @Test
+    @DisplayName("API should be able to respond POST Requests.")
     void sendRequest() {
         String body = given().body("").post("/mock").then().statusCode(200).extract().body().asString();
         System.out.println(body);
