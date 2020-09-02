@@ -1,0 +1,15 @@
+rest-module:
+  image: com.learning/glob:1.0-SNAPSHOT
+  container_name: rest-module
+  environment:
+    - SUITE=RestRequestsSuite
+  volumes:
+    - //c//report//rest-report:/report
+
+math-module:
+  image: com.learning/glob:1.0-SNAPSHOT
+  container_name: math-module
+  environment:
+    - SUITE=MathSuite
+  volumes:
+    - //c//report//math-report:/report
