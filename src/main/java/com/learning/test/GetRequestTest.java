@@ -3,7 +3,7 @@ package com.learning.test;
 import static io.restassured.RestAssured.get;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.learning.rules.Report;
+import com.learning.extension.Report;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;

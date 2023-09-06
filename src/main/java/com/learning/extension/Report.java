@@ -1,9 +1,9 @@
-package com.learning.rules;
+package com.learning.extension;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -17,10 +17,9 @@ public class Report implements TestWatcher, BeforeAllCallback {
     private ExtentReports classReport;
 
     private ExtentReports createExtentReport(String reportName) {
-        ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter(
+        ExtentSparkReporter extentHtmlReporter = new ExtentSparkReporter(
                 "/report".concat(File.separator).concat(reportName).concat(".html"));
 
-        extentHtmlReporter.config().setAutoCreateRelativePathMedia(true);
         extentHtmlReporter.config().setTheme(Theme.DARK);
         extentHtmlReporter.config().setReportName(reportName);
         extentHtmlReporter.config().setDocumentTitle(reportName);

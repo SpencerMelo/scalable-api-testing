@@ -3,19 +3,25 @@ pipeline {
     stages {
         stage('Check version'){
             steps{
-                sh 'mvn --version'
+                withMaven( maven:'Maven-3') {
+                    sh 'mvn --version'
+                }
             }
         }
 
         stage('Clean') {
-            steps {
-                sh 'mvn clean'
+            steps{
+                withMaven(maven:'Maven-3') {
+                    sh 'mvn clean'
+                }
             }
         }
 
         stage('Package and deploy to docker') {
-            steps {
-                sh 'mvn install'
+            steps{
+                withMaven(maven:'Maven-3') {
+                    sh 'mvn install'
+                }
             }
         }
     }

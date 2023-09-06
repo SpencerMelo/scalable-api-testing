@@ -11,7 +11,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
-        <rest.assured.version>4.3.1</rest.assured.version>
+        <rest.assured.version>5.3.1</rest.assured.version>
+        <extent.report.version>5.1.0</extent.report.version>
     </properties>
 
     <dependencies>
@@ -36,14 +37,9 @@
             <version>1.5.2</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-        <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>4.0.9</version>
+            <version>${extent.report.version}</version>
         </dependency>
     </dependencies>
     <build>

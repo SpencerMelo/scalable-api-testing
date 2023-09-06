@@ -1,6 +1,6 @@
 package com.learning.test;
 
-import com.learning.rules.Report;
+import com.learning.extension.Report;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
